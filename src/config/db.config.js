@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const dbConfig = {
-  db_url: process.env.database_url,
+  db_url: process.env.DATABASE_URL,
 };
 
 export default dbConfig;

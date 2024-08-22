@@ -11,22 +11,6 @@ class ProductService {
   // get all products
   async getAllProducts(query) {
     try {
-      //   const limit = query?.limit || 10;
-      //   const offset = query?.page ? (query?.page - 1) * limit : 1;
-
-      //   const excludedQueries = ["limit", "page"];
-      //   excludedQueries.map((exl) => delete query[exl]);
-      //   query = JSON.parse(
-      //     JSON.stringify(query).replace(
-      //       /\b(lt|lte|gt|gte)\b/g,
-      //       (match) => `$${match}`
-      //     )
-      //   );
-
-      //   const products = await this.#_model
-      //     .find(query)
-      //     .limit(Number(limit))
-      //     .skip(Number(offset));
       const limit = query?.limit || 10;
       const page = query?.page || 1;
       const products = await new GetDataFeature(this.#_model.find(), query)
